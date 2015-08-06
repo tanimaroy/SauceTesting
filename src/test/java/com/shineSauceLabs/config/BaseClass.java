@@ -122,32 +122,46 @@ public class BaseClass implements SauceOnDemandSessionIdProvider{
 	
 	@BeforeClass
     public void setUpJenkins() throws Exception {
-
-
-		DesiredCapabilities capabilities = new DesiredCapabilities();
+dateFormat = new SimpleDateFormat("ddMMMMMyyyy-HHmmss");
+		// get current date time with Date()
+		date = new Date();
+        // Construct DesiredCapabilities using the environment variables set by the Sauce plugin
+        DesiredCapabilities capabilities = new DesiredCapabilities().android();
         String version = Utils.readPropertyOrEnv("SELENIUM_VERSION", "");
-        if (!version.equals("")) {
+         if (!version.equals("")) {
             capabilities.setCapability("version", version);
         }
-        capabilities.setCapability("platform", Utils.readPropertyOrEnv("SELENIUM_PLATFORM", "ANDROID"));
-        capabilities.setCapability("browserName", Utils.readPropertyOrEnv("SELENIUM_BROWSER", "Android 5.0 (portrait)"));
-        capabilities.setCapability("name", this.getClass().getName() + "." + testName1.testName());
+        capabilities.setCapability("platformVersion","5.1");
+       capabilities.setCapability("appiumVersion", "1.4.3");
+		capabilities.setCapability("deviceName","Android Emulator");
+       // capabilities.setCapability("platformName","Android");
+        capabilities.setCapability("deviceOrientation", "portrait");
+        capabilities.setCapability("browserName", "");
+        capabilities.setCapability("app","sauce-storage:shine-job-search5.2.apk");
+    //    capabilities.setCapability("name", "Shine Sauce Test "+dateFormat.format(date));
+        capabilities.setCapability("maxDuration", "2000");
+        capabilities.setCapability("command-timeout", "500");
+        
+       capabilities.setCapability("name", this.getClass().getName());
+        capabilities.setCapability("platformName", Utils.readPropertyOrEnv("SELENIUM_PLATFORM", "ANDROID"));
+       // capabilities.setCapability("browserName", Utils.readPropertyOrEnv("SELENIUM_BROWSER", "Android 5.0 (portrait)"));
         sauceUser = Utils.readPropertyOrEnv("SAUCE_USER_NAME", "");
         saucePass = Utils.readPropertyOrEnv("SAUCE_API_KEY", "");
-
+System.out.println("Creating Appium session, this may take couple minutes..");
         driver = new AndroidDriver(
                 new URL("http://" + sauceUser + ":" + saucePass + "@ondemand.saucelabs.com:80/wd/hub"),
                 capabilities);
         
-        System.out.println("Creating Appium session, this may take couple minutes..");
 		System.out.println("Entered Cloud");
 		sessionId.set(((AppiumDriver) driver).getSessionId().toString());
 	 jobID = ((AppiumDriver) driver).getSessionId().toString();
       System.out.println(jobID);
-      NetworkConnectionSetting n= ((AndroidDriver) driver).getNetworkConnection();
-      n.value=2;
-        ((AndroidDriver) driver).setNetworkConnection(n);
-        n.setWifi(true);
+     //NetworkConnectionSetting n= ((AndroidDriver) driver).getNetworkConnection();
+     // n.value=2;
+      //  ((AndroidDriver) driver).setNetworkConnection(n);
+    // n.setWifi(true);
+//NetworkConnectionSetting n = new NetworkConnectionSetting(4);
+  //    ((AndroidDriver) driver).setNetworkConnection(n);
     }
 	
 	/**
