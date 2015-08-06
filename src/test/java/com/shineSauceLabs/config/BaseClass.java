@@ -115,43 +115,12 @@ public class BaseClass implements SauceOnDemandSessionIdProvider{
 	 // Jenkins code end
 	 @BeforeSuite
     public static void cleanUp() throws IOException{
-    	File f = new File("C:/Users/f2736/Documents/HtMediaWorkspace/shineSauceLabs/screenShots");
+    	File f = new File("C:/Users/f2736/Documents/HtMediaWorkspace/SSauce/screenShots");
 		FileUtils.cleanDirectory(f);
     }
+
 	
 	@BeforeClass
-	public static void setUp() throws IOException{
-//		File appDir = new File("C:/Users/f2736/Documents/Shine_apks");
-//		File app = new File(appDir, "shineV3-debug6.apk");
-		dateFormat = new SimpleDateFormat("ddMMMMMyyyy-HHmmss");
-		// get current date time with Date()
-		date = new Date();
-		
-		//System.out.println(tr.getClass());
-		// System.out.println(dateFormat.format(date));
-		DesiredCapabilities caps = DesiredCapabilities.android();
-		caps.setCapability("appiumVersion", "1.4.3");
-		caps.setCapability("deviceName","Android Emulator");
-		caps.setCapability("deviceOrientation", "portrait");
-		caps.setCapability("browserName", "");
-		caps.setCapability("platformVersion","5.0");
-		caps.setCapability("platformName","Android");
-		caps.setCapability("app","sauce-storage:shine-job-search5.2.apk");
-		caps.setCapability("name", "Shine Sauce Test "+dateFormat.format(date));
-		caps.setCapability("maxDuration", "2000");
-		caps.setCapability("command-timeout", "500");
-		//caps.setCapability("app", app.getAbsolutePath());
-		//caps.setCapability("app-package", "com.net.shine"); //Replace with your app's package
-		//caps.setCapability("app-activity", "com.net.shine.SplashScreen"); //Replace with app's Activity
-		driver = new AndroidDriver(new URL("http://"+sauceUser+":"+saucePass+"@ondemand.saucelabs.com:80/wd/hub"), caps);
-	        System.out.println("Creating Appium session, this may take couple minutes..");
-			System.out.println("Entered Cloud");
-			sessionId.set(((AppiumDriver) driver).getSessionId().toString());
-		 jobID = ((AppiumDriver) driver).getSessionId().toString();
-	      System.out.println(jobID);
-	}
-	
-	//@BeforeClass
     public void setUpJenkins() throws Exception {
 
 
