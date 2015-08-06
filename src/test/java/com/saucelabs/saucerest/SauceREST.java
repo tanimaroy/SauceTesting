@@ -138,7 +138,7 @@ public static ITestResult testResult;
      *
      * @param jobId the Sauce Job Id, typically equal to the Selenium/WebDriver sessionId
      */
-    public  void jobPassed(String jobId) {
+    public  void jobPassed(String jobId) throws IOException, InterruptedException{
         Map<String, Object> updates = new HashMap<String, Object>();
         updates.put("passed", true);
         updateJobInfo(jobId, updates);
@@ -149,7 +149,7 @@ public static ITestResult testResult;
      *
      * @param jobId the Sauce Job Id, typically equal to the Selenium/WebDriver sessionId
      */
-    public  void jobFailed(String jobId) {
+    public  void jobFailed(String jobId) throws IOException, InterruptedException{
         Map<String, Object> updates = new HashMap<String, Object>();
         updates.put("passed", false);
         updateJobInfo(jobId, updates);
@@ -341,21 +341,33 @@ public static ITestResult testResult;
      * @param jobId   the Sauce job id to update
      * @param updates Map of attributes to update
      */
-    public  void updateJobInfo(String jobId, Map<String, Object> updates) {
+   public  void updateJobInfo(String jobId, Map<String, Object> updates) throws IOException, InterruptedException {
         HttpURLConnection postBack = null;
+        int code;
+        int count = 0;
         try {
             URL restEndpoint = new URL(String.format(JOB_RESULT_FORMAT, username, jobId));
-            
+            do{
             postBack = openConnection(restEndpoint);
             postBack.setDoOutput(true);
             postBack.setRequestMethod("PUT");
+            code = postBack.getResponseCode();
+ 	        System.out.println("" + postBack); 
+ 	        
+ 	        if(code==404){
+ 	        Thread.sleep(3000);
+ 	       postBack.disconnect();
+ 	        }
+ 	       count++;
+        }while(code==404 && count<5);
             addAuthenticationProperty(postBack);
             String jsonText = JSONValue.toJSONString(updates);
             postBack.getOutputStream().write(jsonText.getBytes());
         } catch (IOException e) {
             logger.log(Level.WARNING, "Error updating Sauce Results", e);
         }
-
+        
+        	
         closeInputStream(postBack);
 
     }
