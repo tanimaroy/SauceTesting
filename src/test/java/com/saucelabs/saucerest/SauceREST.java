@@ -76,7 +76,7 @@ public static ITestResult testResult;
     /**
      * The initial component of the Sauce REST API URL.
      */
-    public static final String RESTURL = "https://saucelabs.com/rest/v1/%1$s";
+    public static final String RESTURL = "https://saucelabs.com";
     /**
      * The String format used to retrieve Sauce Job results for a specific user from the Sauce REST API.
      */
