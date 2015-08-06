@@ -187,7 +187,7 @@ System.out.println("Creating Appium session, this may take couple minutes..");
 		 // String status=sr.retrieveResults("https://saucelabs.com/jobs/"+ jobID + "?auth=" + auth_token);
 
 		  //The file that you want to download
-		String fileName="C:/Users/f2736/Documents/HtMediaWorkspace/shineSauceLabs/screenShots/"+name+"-"+dateFormat.format(date)+".log";
+		String fileName="C:/Users/f2736/Documents/HtMediaWorkspace/SSauce/screenShots/"+name+"-"+dateFormat.format(date)+".log";
 
 		 try {
 			// get URL content
@@ -259,34 +259,6 @@ System.out.println("Creating Appium session, this may take couple minutes..");
 
 	}
   
-
-	public static void installSwiftKey(){
-		
-		
-		driver.manage().timeouts().implicitlyWait(100, TimeUnit.SECONDS);
-		driver.findElement(By.id("com.android.launcher:id/market_button")).click();
-		driver.findElement(By.id("com.android.vending:id/search_box_idle_text")).sendKeys("SwiftKey Keyboard + Emoji");
-		driver.findElements(By.id("com.android.vending:id/suggestion_list_recycler_view")).get(1).findElements(By.className("android.widget.RelativeLayout")).get(0).click();
-		driver.findElement(By.id("com.android.vending:id/buy_button")).click();
-		driver.findElement(By.name("ACCEPT")).click();
-		driver.findElement(By.id("com.android.vending:id/launch_button")).click();
-	//	driver.installApp("C:/Users/f2736/Documents/Shine_apks/swiftkey-5.2.3.144.apk");
-	//driver.launchApp();
-		driver.findElement(By.id("com.touchtype.swiftkey:id/enable_swiftkey")).click();
-		List<WebElement> l = driver.findElements(By.id("android:id/list"));
-		l.size();
-	List<WebElement> l1=	l.get(0).findElements(By.className("android.widget.LinearLayout"));
-	l1.get(l.size()-1).findElements(By.id("android:id/widget_frame")).get(0).findElement(By.id("android:id/checkbox")).click();
-	driver.findElement(By.id("android:id/button1")).click();
-		driver.findElement(By.id("com.touchtype.swiftkey:id/set_as_default")).click();
-		List <WebElement> l3 = driver.findElements(By.id("android:id/select_dialog_listview"));
-		l3.get(l3.size()-1).findElement(By.id("android:id/radio")).click();
-		
-		driver.findElement(By.id("com.touchtype.swiftkey:id/enable_cloud")).click();
-		driver.findElement(By.id("com.touchtype.swiftkey:id/cloud_setup_cancel")).click();
-	driver.findElement(By.id("com.touchtype.swiftkey:id/button_finish")).click();	
-	driver.closeApp();
-	}
 	public static void existingUserLogin(int no){
 		if(no==0){
 			driver.findElementById("com.net.shine:id/email").sendKeys("f2736@htmedia.in");
@@ -396,7 +368,7 @@ List<WebElement> l0 = driver.findElementsById("com.net.shine:id/dialog_item_labe
 		try{
 		File scrFile = ((TakesScreenshot) driver)
 				.getScreenshotAs(OutputType.FILE);
-		File f = new File("C:/Users/f2736/Documents/HtMediaWorkspace/shineSauceLabs/screenShots/"
+		File f = new File("C:/Users/f2736/Documents/HtMediaWorkspace/SSauce/screenShots/"
 				+ picture);
 		if (f.isFile() && f.exists()) 
         { f.delete();
