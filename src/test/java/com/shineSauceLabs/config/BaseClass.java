@@ -131,8 +131,8 @@ dateFormat = new SimpleDateFormat("ddMMMMMyyyy-HHmmss");
          if (!version.equals("")) {
             capabilities.setCapability("version", version);
         }
-        capabilities.setCapability("platformVersion","5.1");
-       capabilities.setCapability("appiumVersion", "1.4.3");
+        capabilities.setCapability("platformVersion","4.4");
+       capabilities.setCapability("appiumVersion", "1.4.7");
 		capabilities.setCapability("deviceName","Android Emulator");
        // capabilities.setCapability("platformName","Android");
         capabilities.setCapability("deviceOrientation", "portrait");
