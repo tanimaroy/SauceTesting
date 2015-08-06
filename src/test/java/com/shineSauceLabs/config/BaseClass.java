@@ -87,8 +87,8 @@ import com.saucelabs.testng.SauceOnDemandTestListener;
 public class BaseClass implements SauceOnDemandSessionIdProvider{
 	
 	protected static AppiumDriver driver;
-	protected static String saucePass="";
-	protected static String sauceUser="";
+	protected static String saucePass=Utils.readPropertyOrEnv("SAUCE_API_KEY", "");
+	protected static String sauceUser=Utils.readPropertyOrEnv("SAUCE_USER_NAME", "");
 	//public static WebDriver driver;
 	public static AndroidDriver dri;
 	public static int userFull = 0;
@@ -145,8 +145,8 @@ dateFormat = new SimpleDateFormat("ddMMMMMyyyy-HHmmss");
        capabilities.setCapability("name", this.getClass().getSimpleName());
         capabilities.setCapability("platformName", Utils.readPropertyOrEnv("SELENIUM_PLATFORM", "ANDROID"));
        // capabilities.setCapability("browserName", Utils.readPropertyOrEnv("SELENIUM_BROWSER", "Android 5.0 (portrait)"));
-        sauceUser = Utils.readPropertyOrEnv("SAUCE_USER_NAME", "");
-        saucePass = Utils.readPropertyOrEnv("SAUCE_API_KEY", "");
+       // sauceUser = Utils.readPropertyOrEnv("SAUCE_USER_NAME", "");
+      //  saucePass = Utils.readPropertyOrEnv("SAUCE_API_KEY", "");
 System.out.println("Creating Appium session, this may take couple minutes..");
         driver = new AndroidDriver(
                 new URL("http://" + sauceUser + ":" + saucePass + "@ondemand.saucelabs.com:80/wd/hub"),
