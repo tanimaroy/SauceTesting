@@ -1,0 +1,123 @@
+01/06/2015 10:42:30 devpinoyLogger Properties loaded.
+01/06/2015 10:42:40 devpinoyLogger Execute All URLCHECKs
+01/06/2015 10:42:40 devpinoyLogger URL Checking.....
+01/06/2015 10:42:43 devpinoyLogger URL Checking.....
+01/06/2015 10:42:44 devpinoyLogger URL Checking.....
+01/06/2015 10:42:47 devpinoyLogger URL Checking.....
+01/06/2015 10:42:49 devpinoyLogger URL Checking.....
+01/06/2015 10:42:50 devpinoyLogger URL Checking.....
+01/06/2015 10:42:57 devpinoyLogger URL Checking.....
+01/06/2015 10:43:04 devpinoyLogger URL Checking.....
+01/06/2015 10:43:11 devpinoyLogger Properties loaded.
+01/06/2015 10:43:19 devpinoyLogger Home Page Loaded
+01/06/2015 10:43:19 devpinoyLogger ***Script SalaryPredictor has started***
+01/06/2015 10:43:19 devpinoyLogger Clicking signin Button.
+01/06/2015 10:43:21 devpinoyLogger Executing Username Test.
+01/06/2015 10:43:21 devpinoyLogger Executing password Test.
+01/06/2015 10:43:37 devpinoyLogger Salary Graph is visible
+01/06/2015 10:43:41 devpinoyLogger Salary Graph is visible
+01/06/2015 10:43:41 devpinoyLogger ***Script SalaryPredictor has Ended***
+01/06/2015 10:43:41 devpinoyLogger Properties loaded.
+01/06/2015 10:43:48 devpinoyLogger Home Page Loaded
+01/06/2015 10:43:48 devpinoyLogger ***Script NavigationMenu has started***
+01/06/2015 10:44:39 devpinoyLogger ***Script NavigationMenu has Ended***
+01/06/2015 10:44:39 devpinoyLogger Properties loaded.
+01/06/2015 10:44:46 devpinoyLogger Home Page Loaded
+01/06/2015 10:44:46 devpinoyLogger ***Script AssistMe has started***
+01/06/2015 10:44:47 devpinoyLogger Clicking signin Button.
+01/06/2015 10:44:49 devpinoyLogger Executing Username Test.
+01/06/2015 10:44:49 devpinoyLogger Executing password Test.
+01/06/2015 10:45:23 devpinoyLogger ***Script AssistMe has Ended***
+01/06/2015 10:45:23 devpinoyLogger Properties loaded.
+01/06/2015 10:45:31 devpinoyLogger Home Page Loaded
+01/06/2015 10:45:31 devpinoyLogger ***Script CatUserInput has started***
+01/06/2015 10:45:31 devpinoyLogger Clicking signin Button.
+01/06/2015 10:45:33 devpinoyLogger Executing Username Test.
+01/06/2015 10:45:33 devpinoyLogger Executing password Test.
+01/06/2015 10:45:50 devpinoyLogger ***Script CatUserInput has Ended***
+01/06/2015 10:45:50 devpinoyLogger Properties loaded.
+01/06/2015 10:45:57 devpinoyLogger Home Page Loaded
+01/06/2015 10:45:57 devpinoyLogger ***Script AskYourQuestion has started***
+01/06/2015 10:45:58 devpinoyLogger Clicking signin Button.
+01/06/2015 10:45:59 devpinoyLogger Executing Username Test.
+01/06/2015 10:46:00 devpinoyLogger Executing password Test.
+01/06/2015 10:46:04 devpinoyLogger Entering a Question
+01/06/2015 10:46:05 devpinoyLogger text area cleared
+01/06/2015 10:46:06 devpinoyLogger Question keys sent
+01/06/2015 10:46:06 devpinoyLogger Executing select values Test.
+01/06/2015 10:46:12 devpinoyLogger Executing write content message Test.
+01/06/2015 10:46:12 devpinoyLogger Clear ask related tags
+01/06/2015 10:46:12 devpinoyLogger selected by send keys bc
+01/06/2015 10:46:13 devpinoyLogger Executing select course Test.
+01/06/2015 10:46:13 devpinoyLogger Posted the Question
+01/06/2015 10:46:23 devpinoyLogger Executing reply answer text message Test
+01/06/2015 10:46:23 devpinoyLogger ***Script AskYourQuestion has Ended***
+01/06/2015 10:46:24 devpinoyLogger Properties loaded.
+01/06/2015 10:46:31 devpinoyLogger Home Page Loaded
+01/06/2015 10:46:31 devpinoyLogger ***Script CollegeProspectusDownload has started***
+01/06/2015 10:46:31 devpinoyLogger Clicking signin Button.
+01/06/2015 10:46:33 devpinoyLogger Executing Username Test.
+01/06/2015 10:46:33 devpinoyLogger Executing password Test.
+01/06/2015 10:46:41 devpinoyLogger Executing links Test.
+01/06/2015 10:46:42 devpinoyLogger Executing college Test.
+01/06/2015 10:46:47 devpinoyLogger Executing link open new tab Test.
+01/06/2015 10:46:49 devpinoyLogger Executing download brochure Test.
+01/06/2015 10:46:49 devpinoyLogger ***Script CollegeProspectusDownload has Ended***
+01/06/2015 10:46:50 devpinoyLogger Properties loaded.
+01/06/2015 10:46:57 devpinoyLogger Home Page Loaded
+01/06/2015 10:46:57 devpinoyLogger ***Script SearchInstitute has started***
+01/06/2015 10:46:58 devpinoyLogger Clicking signin Button.
+01/06/2015 10:46:59 devpinoyLogger Executing Username Test.
+01/06/2015 10:47:00 devpinoyLogger Executing password Test.
+01/06/2015 10:47:04 devpinoyLogger Clicked on Institute Tab.
+01/06/2015 10:47:05 devpinoyLogger Entered the College Name.
+01/06/2015 10:47:08 devpinoyLogger Clicked on Submit button.
+01/06/2015 10:47:10 devpinoyLogger Not Matched.
+01/06/2015 10:47:10 devpinoyLogger Search Institute Finished from Home..
+01/06/2015 10:47:10 devpinoyLogger ***Script SearchInstitute has Ended***
+01/06/2015 10:47:10 devpinoyLogger Properties loaded.
+01/06/2015 10:47:18 devpinoyLogger Home Page Loaded
+01/06/2015 10:47:18 devpinoyLogger ***Script LeaderBoard has started***
+01/06/2015 10:47:19 devpinoyLogger Clicking signin Button.
+01/06/2015 10:47:20 devpinoyLogger Executing Username Test.
+01/06/2015 10:47:20 devpinoyLogger Executing password Test.
+01/06/2015 10:47:31 devpinoyLogger view profile clicked
+01/06/2015 10:47:34 devpinoyLogger User has already clicked follow 
+01/06/2015 10:47:34 devpinoyLogger ***Script LeaderBoard has Ended***
+01/06/2015 10:47:35 devpinoyLogger Properties loaded.
+01/06/2015 10:47:57 devpinoyLogger Home Page Loaded
+01/06/2015 10:47:57 devpinoyLogger ***Script SaveSearchResults has started***
+01/06/2015 10:47:57 devpinoyLogger Clicking signin Button.
+01/06/2015 10:47:58 devpinoyLogger Executing Username Test.
+01/06/2015 10:47:59 devpinoyLogger Executing password Test.
+01/06/2015 10:48:05 devpinoyLogger Executing drop down select values Test.
+01/06/2015 10:48:06 devpinoyLogger Executing drop down select values2 Test.
+01/06/2015 10:48:08 devpinoyLogger Executing drop down select values2 Test.
+01/06/2015 10:48:09 devpinoyLogger Executing drop down select values3 Test.
+01/06/2015 10:48:12 devpinoyLogger Clicked Browse colleges
+01/06/2015 10:48:14 devpinoyLogger Executing link open new tab Test.
+01/06/2015 10:48:19 devpinoyLogger College name added to wishlist is - Asia Pacific Institute Of Information Technology
+01/06/2015 10:48:19 devpinoyLogger Executing saved search Test.
+01/06/2015 10:48:19 devpinoyLogger Properties loaded.
+01/06/2015 10:48:27 devpinoyLogger Home Page Loaded
+01/06/2015 10:48:27 devpinoyLogger ***Script MockArticlePage has started***
+01/06/2015 10:48:27 devpinoyLogger Clicking signin Button.
+01/06/2015 10:48:29 devpinoyLogger Executing Username Test.
+01/06/2015 10:48:29 devpinoyLogger Executing password Test.
+01/06/2015 10:48:38 devpinoyLogger Executing mock test search with select category result.
+01/06/2015 10:49:02 devpinoyLogger Executing Article view count and like/Dislike articles.
+01/06/2015 10:49:02 devpinoyLogger ***Script MockArticlePage has Ended***
+01/06/2015 10:49:02 devpinoyLogger Properties loaded.
+01/06/2015 10:50:15 devpinoyLogger Home Page Loaded
+01/06/2015 10:50:15 devpinoyLogger ***Script UserAccount has started***
+01/06/2015 10:50:16 devpinoyLogger Clicking signin Button.
+01/06/2015 10:50:18 devpinoyLogger Executing Username Test.
+01/06/2015 10:50:18 devpinoyLogger Executing password Test.
+01/06/2015 10:50:27 devpinoyLogger Executing Account Button
+01/06/2015 10:50:28 devpinoyLogger Executing load more.
+01/06/2015 10:50:33 devpinoyLogger College wishlist is - Asia Pacific Institute Of Information Technology
+01/06/2015 10:50:33 devpinoyLogger Added college in your Want to watch List.
+01/06/2015 10:50:33 devpinoyLogger Executing college compare test
+01/06/2015 10:50:35 devpinoyLogger Executing link open new tab Test.
+01/06/2015 10:50:38 devpinoyLogger Executing Clear college compare test
+01/06/2015 10:50:46 devpinoyLogger Executing Filter Categories & sub-categories test
