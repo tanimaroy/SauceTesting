@@ -87,8 +87,8 @@ import com.saucelabs.testng.SauceOnDemandTestListener;
 public class BaseClass implements SauceOnDemandSessionIdProvider{
 	
 	protected static AppiumDriver driver;
-	protected static String username="";
-	protected static String accessKey="";
+	protected static String saucePass="";
+	protected static String sauceUser="";
 	//public static WebDriver driver;
 	public static AndroidDriver dri;
 	public static int userFull = 0;
@@ -163,11 +163,11 @@ public class BaseClass implements SauceOnDemandSessionIdProvider{
         capabilities.setCapability("platform", Utils.readPropertyOrEnv("SELENIUM_PLATFORM", "ANDROID"));
         capabilities.setCapability("browserName", Utils.readPropertyOrEnv("SELENIUM_BROWSER", "Android 5.0 (portrait)"));
         capabilities.setCapability("name", this.getClass().getName() + "." + testName1.testName());
-        username = Utils.readPropertyOrEnv("SAUCE_USER_NAME", "");
-        accessKey = Utils.readPropertyOrEnv("SAUCE_API_KEY", "");
+        sauceUser = Utils.readPropertyOrEnv("SAUCE_USER_NAME", "");
+        saucePass = Utils.readPropertyOrEnv("SAUCE_API_KEY", "");
 
         driver = new AndroidDriver(
-                new URL("http://" + username + ":" + accessKey + "@ondemand.saucelabs.com:80/wd/hub"),
+                new URL("http://" + sauceUser + ":" + saucePass + "@ondemand.saucelabs.com:80/wd/hub"),
                 capabilities);
         
         System.out.println("Creating Appium session, this may take couple minutes..");
@@ -194,7 +194,7 @@ public class BaseClass implements SauceOnDemandSessionIdProvider{
 	  dateFormat = new SimpleDateFormat("ddMMMMMyyyy-HHmmss");
 		// get current date time with Date()
 		date = new Date();
-	  String key = username + ":" + accessKey;
+	  String key = sauceUser + ":" + saucePass;
 	 
       String auth_token = SecurityUtils.hmacEncode("HmacMD5", jobID, key);
       String authLink = "https://assets.saucelabs.com/jobs/" + jobID + "/log.json?auth=" + auth_token;
