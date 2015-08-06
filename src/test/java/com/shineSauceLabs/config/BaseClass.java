@@ -142,7 +142,7 @@ dateFormat = new SimpleDateFormat("ddMMMMMyyyy-HHmmss");
         capabilities.setCapability("maxDuration", "2000");
         capabilities.setCapability("command-timeout", "500");
         
-       capabilities.setCapability("name", this.getClass().getName());
+       capabilities.setCapability("name", this.getClass().getSimpleName());
         capabilities.setCapability("platformName", Utils.readPropertyOrEnv("SELENIUM_PLATFORM", "ANDROID"));
        // capabilities.setCapability("browserName", Utils.readPropertyOrEnv("SELENIUM_BROWSER", "Android 5.0 (portrait)"));
         sauceUser = Utils.readPropertyOrEnv("SAUCE_USER_NAME", "");
