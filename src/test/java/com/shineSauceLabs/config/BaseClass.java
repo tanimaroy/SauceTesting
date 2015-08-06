@@ -87,8 +87,8 @@ import com.saucelabs.testng.SauceOnDemandTestListener;
 public class BaseClass implements SauceOnDemandSessionIdProvider{
 	
 	protected static AppiumDriver driver;
-	protected static String sauceUser="tanima_04";
-	protected static String saucePass="5a066217-bfa4-4c22-8d4f-4b97f0a2091f";
+	protected static String username="";
+	protected static String accessKey="";
 	//public static WebDriver driver;
 	public static AndroidDriver dri;
 	public static int userFull = 0;
@@ -163,8 +163,8 @@ public class BaseClass implements SauceOnDemandSessionIdProvider{
         capabilities.setCapability("platform", Utils.readPropertyOrEnv("SELENIUM_PLATFORM", "ANDROID"));
         capabilities.setCapability("browserName", Utils.readPropertyOrEnv("SELENIUM_BROWSER", "Android 5.0 (portrait)"));
         capabilities.setCapability("name", this.getClass().getName() + "." + testName1.testName());
-        String username = Utils.readPropertyOrEnv("SAUCE_USER_NAME", "");
-        String accessKey = Utils.readPropertyOrEnv("SAUCE_API_KEY", "");
+        username = Utils.readPropertyOrEnv("SAUCE_USER_NAME", "");
+        accessKey = Utils.readPropertyOrEnv("SAUCE_API_KEY", "");
 
         driver = new AndroidDriver(
                 new URL("http://" + username + ":" + accessKey + "@ondemand.saucelabs.com:80/wd/hub"),
@@ -180,72 +180,7 @@ public class BaseClass implements SauceOnDemandSessionIdProvider{
         ((AndroidDriver) driver).setNetworkConnection(n);
         n.setWifi(true);
     }
-	//@AfterSuite
-	public static void endTest() throws Exception {
-		 final String fromEmail = "f2736@htmedia.in"; //requires valid email id
-	        final String password = "tanima@123"; // correct password for email id
-	        
-	      //  final String toEmail = "nikunj.bhatter@hindustantimes.com,mansha.chuttani@hindustantimes.com,sumit.jain@hindustantimes.com,rajesh.kaushik@hindustantimes.com,ankur.gupta@hindustantimes.com,tanima.roy@hindustantimes.com,nisarg.mehta@hindustantimes.com,gaurav.bansal@hindustantimes.com"; // any email id
-	        
-	        final String toEmail = "tanima.roy@hindustantimes.com"; // any email id
-	        
-	        
-	       // final String toEmail = "vikas.srivastava@hindustantimes.com"; // any email id
-	        String[] text = new String[4];
-	        try {
-
-	        	DocumentBuilderFactory docBuilderFactory = DocumentBuilderFactory.newInstance();
-	        	DocumentBuilder docBuilder = docBuilderFactory.newDocumentBuilder();
-	        	Document doc = docBuilder.parse (new File("C:/Users/f2736/Documents/HtMediaWorkspace/shineSauceLabs/target/surefire-reports/testng-results.xml"));
-
-	        	// normalize text representation
-	        	doc.getDocumentElement ().normalize ();
-	        	
-
-
-	        	NodeList results = doc.getElementsByTagName("testng-results");
-	        	
-
-	        	Element firstNameElement = (Element)results.item(0);
-	        	NamedNodeMap r2 = firstNameElement.getAttributes();
-	        	
-	        	System.out.println(r2.getLength());
-	        	for (int i = 0; i < r2.getLength(); ++i)
-	        	{
-	        	    Node attr = r2.item(i);
-	        	    text[i]=attr.getNodeName() + " = \"" + attr.getNodeValue() + "\"";
-	        	    //System.out.println(attr.getNodeName() + " = \"" + attr.getNodeValue() + "\"");
-	        	}
-
-	        } catch(Exception e){
-	        	
-	        }
-	        System.out.println(Arrays.toString(text));
-	        Properties props = new Properties();
-	        
-	        props.put("mail.smtp.host", "pod51024.outlook.com"); //SMTP Host - office 
-	       // props.put("mail.smtp.host", "smtp.gmail.com"); //SMTP Host - office
-	        props.put("mail.smtp.port", "587"); //TLS Port
-	        props.put("mail.smtp.auth", "true"); //enable authentication
-	        props.put("mail.smtp.starttls.enable", "true"); //enable STARTTLS
-	       
-	        
-	        //create Authenticator object to pass in Session.getInstance argument
-	        Authenticator auth = new Authenticator() {
-	        //override the getPasswordAuthentication method
-	        protected PasswordAuthentication getPasswordAuthentication() {
-	          return new PasswordAuthentication(fromEmail, password);
-	        	}
-	        };
-		
-		    Session session = Session.getInstance(props, auth);
-		//	System.out.println(CONFIG.getProperty("testSiteURL"));
-		    System.out.println("Authorization passed...");
-		    
-		     //Calling Email Function with attachment
-	        EmailUtil.sendAttachmentEmail(session, toEmail,"Shine Android Automation Report"+" "+Arrays.toString(text), "Sir, Check your Automation report.");
-	    
-	}
+	
 	/**
      * Setup the environment before testing
 	 * @throws InterruptedException 
@@ -259,7 +194,7 @@ public class BaseClass implements SauceOnDemandSessionIdProvider{
 	  dateFormat = new SimpleDateFormat("ddMMMMMyyyy-HHmmss");
 		// get current date time with Date()
 		date = new Date();
-	  String key = sauceUser + ":" + saucePass;
+	  String key = username + ":" + accessKey;
 	 
       String auth_token = SecurityUtils.hmacEncode("HmacMD5", jobID, key);
       String authLink = "https://assets.saucelabs.com/jobs/" + jobID + "/log.json?auth=" + auth_token;
