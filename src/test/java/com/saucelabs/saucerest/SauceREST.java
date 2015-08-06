@@ -343,23 +343,23 @@ public static ITestResult testResult;
      */
    public  void updateJobInfo(String jobId, Map<String, Object> updates) throws IOException, InterruptedException {
         HttpURLConnection postBack = null;
-        int code;
-        int count = 0;
+        //int code;
+        //int count = 0;
         try {
             URL restEndpoint = new URL(String.format(JOB_RESULT_FORMAT, username, jobId));
-            do{
+     //       do{
             postBack = openConnection(restEndpoint);
             postBack.setDoOutput(true);
             postBack.setRequestMethod("PUT");
-            code = postBack.getResponseCode();
- 	        System.out.println("" + postBack); 
+       //     code = postBack.getResponseCode();
+ 	 //       System.out.println("" + postBack); 
  	        
- 	        if(code==404){
- 	        Thread.sleep(3000);
- 	       postBack.disconnect();
- 	        }
- 	       count++;
-        }while(code==404 && count<5);
+ 	   //     if(code==404){
+ 	     //   Thread.sleep(3000);
+ 	     //  postBack.disconnect();
+ 	   //     }
+ 	   //    count++;
+       // }while(code==404 && count<5);
             addAuthenticationProperty(postBack);
             String jsonText = JSONValue.toJSONString(updates);
             postBack.getOutputStream().write(jsonText.getBytes());
