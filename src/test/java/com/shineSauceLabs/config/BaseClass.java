@@ -261,7 +261,7 @@ System.out.println("Creating Appium session, this may take couple minutes..");
   
 	public static void existingUserLogin(int no){
 		if(no==0){
-			driver.findElementById("com.net.shine:id/email").sendKeys("f2736@htmedia.in");
+			driver.findElementById("com.net.shine:id/email").sendKeys("tanimasaucegit@gmail.com");
 		//	driver.findElementById("com.net.shine:id/email").sendKeys("fftestshine158551@ymail.com");
 //	driver.hideKeyboard();
 	driver.findElement(By.id("com.net.shine:id/password")).click();
@@ -269,12 +269,12 @@ System.out.println("Creating Appium session, this may take couple minutes..");
 			driver.findElementById("com.net.shine:id/password").sendKeys("password@123");
 			//driver.findElementById("com.net.shine:id/login_btn").click();
 		} else {
-		//driver.findElementById("com.net.shine:id/email").sendKeys("Ankurgupta18@gmail.com");
+		
 		//driver.findElementById("com.net.shine:id/email").sendKeys("fftestshine151977@mailinator.com");
 driver.findElementById("com.net.shine:id/email").sendKeys(fullName);
 //driver.hideKeyboard();
 driver.findElement(By.id("com.net.shine:id/password")).click();
-//driver.findElementById("com.net.shine:id/password").sendKeys("ankur1");
+
 		driver.findElementById("com.net.shine:id/password").sendKeys("Shine@12345");
 		
 		}
