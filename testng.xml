@@ -6,22 +6,10 @@
 
 	<test name="shineSauceLabs" parallel="false" preserve-order="true">
 		<classes>
-			<class name="com.shineSauceLabs.Main.FullRegisterPage" />
-		<!--	<class name="com.shineSauceLabs.Main.JobAlert" />
-			<class name="com.shineSauceLabs.Main.SearchJobs" />
-			<class name="com.shineSauceLabs.Main.ApplyJobs" />
-			<class name="com.shineSauceLabs.Main.Inbox" />
-			<class name="com.shineSauceLabs.Main.MatchedJobs" />
+		
 			<class name="com.shineSauceLabs.Main.MenuItems" />
-            <class name="com.shineSauceLabs.Main.HomePage" />
-
-			<class name="com.shineSauceLabs.NewUser.IncompleteRegisterPage" />
-			<class name="com.shineSauceLabs.NewUser.FresherRegisterPage" />
-			<class name="com.shineSauceLabs.NewUser.SearchJobsNoUser" />
-			<class name="com.shineSauceLabs.NewUser.NewUserMenu" />-->
+            
 		</classes>
 	</test>
-	<!-- <test name="UserNew" parallel="false" preserve-order="true"> <classes> 
-		<class name="com.shineSauceLabs.Main.VerifyEditProfile" /> </classes> </test> 
-		<test name="forgotPassword" preserve-order="true"> <classes> </classes> </test> -->
+	
 </suite>
